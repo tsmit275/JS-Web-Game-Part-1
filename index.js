@@ -1,21 +1,25 @@
 function newImage(left, bottom, src){
-let characters = document.createElement('img')
-characters.src = src
-characters.style.position = 'fixed'
-characters.style.left = left +"px"
-characters.style.bottom = bottom +"px"
-document.body.append(characters)
-
-characters.addEventListener('dblclick', function(){
-    characters.remove()
-})
+  let characters = document.createElement('img')
+  characters.src = src
+  characters.style.position = 'fixed'
+  characters.style.left = left +"px"
+  characters.style.bottom = bottom +"px"
+  document.body.append(characters)
 
 }
-function newItem(url, left, bottom){
-    let object = newImage(url, left, bottom)
+debugger
+function newItem(left, bottom, src){
+    let item = document.createElement('img');
+    item.src = src
+    item.style.position = 'fixed'
+    item.className = 'item'
+    item.style.left = left + 'px'
+    item.style.bottom = bottom +"px"
+    document.body.append(item)
 
-    object.addEventListener('dblclick', () => {
-        object.remove()
+    
+    item.addEventListener('dblclick', function (){
+      item.remove()
     })
 }
 
